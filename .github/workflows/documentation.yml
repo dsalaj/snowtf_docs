@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install sphinx # Install Sphinx core
           # If you have a requirements.txt for your docs, uncomment the line below:
-          # pip install -r docs/requirements.txt
+          pip install -r requirements.txt
 
       # Step 4: Build the Sphinx documentation.
       # This explicitly runs the 'make html' command in your root directory.
