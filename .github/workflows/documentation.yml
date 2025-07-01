@@ -48,10 +48,9 @@ jobs:
           # pip install -r docs/requirements.txt
 
       # Step 4: Build the Sphinx documentation.
-      # This explicitly runs the 'make html' command in your 'docs/' directory.
+      # This explicitly runs the 'make html' command in your root directory.
       - name: Build Sphinx HTML documentation
         run: |
-          cd docs/
           make html
         # Ensure the build command exits successfully.
 
