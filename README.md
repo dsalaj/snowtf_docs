@@ -12,3 +12,4 @@ make html
 
 - https://www.sphinx-doc.org/en/master/usage/quickstart.html
 
+TODO: copy content from notes
