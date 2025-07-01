@@ -63,7 +63,7 @@ jobs:
           # Name of the artifact. This name is important for the download step.
           name: github-pages
           # Path to the built HTML documentation.
-          path: docs/_build/html/
+          path: _build/html/
           # Retain the artifact for a short period (e.g., 1 day) for debugging.
           retention-days: 1
 
