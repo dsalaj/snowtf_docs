@@ -106,7 +106,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # The path to the directory containing the static files to be deployed.
-          path: . # The artifact was downloaded to the current directory.
+          path: _build/html/ # The artifact was downloaded to the current directory.
 
       # Step 3: Deploy to GitHub Pages.
       # Uses actions/deploy-pages@v4 to publish the content.
