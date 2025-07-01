@@ -76,7 +76,7 @@ jobs:
 
     # Condition to only run this job on pushes to the main branch.
     # This prevents deployment from feature branches in pull requests.
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Change 'main' to 'master' if that's your default branch
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Change 'main' to 'master' if that's your default branch
 
     # Permissions needed for GitHub Pages deployment.
     # `pages: write` allows writing to the GitHub Pages branch.
