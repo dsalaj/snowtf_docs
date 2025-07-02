@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Introduction" href="introduction.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="🚀 Getting Started" href="getting_started.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
         <title>SnowTF documentation</title>
@@ -178,7 +178,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -198,14 +198,13 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="introduction.html">Introduction</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Introduction</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">❄ Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">🚀 Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of 🚀 Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="limitations.html">⚠️  Limitations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of ⚠️  Limitations</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="limitations.html">⚠️  Limitations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of ⚠️  Limitations</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -242,24 +241,87 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="snowtf-documentation">
-<h1>SnowTF documentation<a class="headerlink" href="#snowtf-documentation" title="Link to this heading">¶</a></h1>
-<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
-<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
-documentation for details.</p>
-<p>SnowTF is a modular snowflake template based on official snowflake terraform provider.</p>
-<div class="toctree-wrapper compound">
+          <section id="introduction">
+<h1>❄ Introduction<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h1>
+<p>SnowTF is a modular snowflake template based on <a class="reference external" href="https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs">official Snowflake Terraform provider</a>.
+It enables developers to quickly set up a new snowflake account following best practices and guidelines.</p>
+<p>The architecture of SnowTF template is specifically designed to support smaller teams or individual administrators managing a Snowflake account.
+By prioritizing transparency and modularity, the system enhances clarity and facilitates faster learning and understanding of the underlying entities.
+The architecture is intentionally straightforward, making it easy to customize and extend to meet specific organizational requirements.</p>
+<section id="differences-to-snowddl">
+<h2>Differences to SnowDDL<a class="headerlink" href="#differences-to-snowddl" title="Link to this heading">¶</a></h2>
+<p><a class="reference external" href="https://docs.snowddl.com/">SnowDDL</a> is a standalone tool that can be used to manage snowflake accounts.</p>
+<section id="why-is-snowddl-better">
+<h3>Why is SnowDDL better?<a class="headerlink" href="#why-is-snowddl-better" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Stateless operation: SnowDDL queries the Snowflake account directly to determine the current state, ensuring synchronization with any manual changes.</p></li>
+<li><p>Offers a more opinionated and highly configurable approach, making it well-suited for managing large Snowflake accounts and supporting larger teams.</p></li>
+<li><p>Provides a predefined, fine-grained <a class="reference external" href="https://docs.snowddl.com/guides/role-hierarchy#rationale">role hierarchy</a> to facilitate granular access control and permission management.</p></li>
+<li><p>During the setup of a large account, all configuration options must be reviewed and explicitly defined, ensuring that long-term architectural decisions are considered up front.</p></li>
+</ul>
+</section>
+<section id="why-is-snowtf-better">
+<h3>Why is SnowTF better?<a class="headerlink" href="#why-is-snowtf-better" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Built on the <a class="reference external" href="https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs">official Snowflake Terraform provider</a>, ensuring reliability and ongoing support.</p></li>
+<li><p>Deployment logic and mechanisms are delegated to the official provider, leveraging existing team expertise with Terraform.</p></li>
+<li><p>Lightweight architecture enables rapid onboarding and ease of use.</p></li>
+<li><p>All resources, including deployment users, are defined declaratively in Terraform, providing full transparency and auditability.</p></li>
+<li><p>Fully compatible with <a class="reference external" href="https://kics.io/">KICS</a>, other security tools, and the broader Terraform ecosystem.</p></li>
+<li><p>Flexible design tailored for specialized and smaller teams.</p></li>
+<li><p>Supports incremental adoption and decommissioning, allowing components to be added, removed, or replaced in a controlled and gradual manner.</p></li>
+<li><p>Follows only the official Snowflake best practices. For Example SnowDDL enforces a <a class="reference external" href="https://docs.snowddl.com/guides/object-identifiers">convention for object identifiers</a>, while we only follow the <a href="#id2"><span class="problematic" id="id3">`Snowflake identifier requirements`_</span></a>.</p></li>
+</ul>
+</section>
+<section id="similarities-and-differences">
+<h3>Similarities and Differences<a class="headerlink" href="#similarities-and-differences" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>For RBAC SnowDDL uses a strict <a class="reference external" href="https://docs.snowddl.com/guides/role-hierarchy#general-overview">3 tier system</a>: access, business, and user roles. That means every user has a dedicated user role.
+In SnowTF we follow the <a class="reference external" href="https://docs.snowflake.com/en/user-guide/security-access-control-overview#roles">simplified recommendation with access and functional roles</a> (analog to first two tiers of SnowDDL system), but skip the individual user roles.
+As a replacement, admins can rely on custom roles usually managed externally by an IAM system.
+This can be freely combined with any additional user, team, use case roles that are freely definable and managed by the developers.
+This way we ensure the flexibility of our template and give developers the freedom to extend the RBAC system as they see fit.</p></li>
+<li><p>SnowDDL doesn’t use the native Snowflake secondary roles feature as it is redundant with the tier 3 user roles layer.
+SnowTF does not enforce the third tier of user roles and the secondary roles feature is enabled by default as per official Snowflake configuration.
+We made this decision for SnowTF as we want to make our users aware of the roles they are assigned and are currently using.
+That way the RBAC system is more transparent and the non-technical users have a better intuition of what is needed when onboarding new users or communicating eventual issues.
+However this is only the default behaviour and the user roles can easily be implemented as additional roles layer if needed.
+For enterprice ettings we recommend using the established IAM system for managing the “third tier” of user or team roles for better security and easier auditing.</p></li>
+<li><p>SnowDDL: <code class="docutils literal notranslate"><span class="pre">Unused</span> <span class="pre">roles</span> <span class="pre">for</span> <span class="pre">non-existent</span> <span class="pre">schemas,</span> <span class="pre">warehouses,</span> <span class="pre">shares,</span> <span class="pre">users</span> <span class="pre">are</span> <span class="pre">dropped</span> <span class="pre">automatically.</span> <span class="pre">It</span> <span class="pre">helps</span> <span class="pre">to</span> <span class="pre">reduce</span> <span class="pre">amount</span> <span class="pre">of</span> <span class="pre">&quot;orphan&quot;</span> <span class="pre">roles</span> <span class="pre">in</span> <span class="pre">account.</span></code>
+SnowTF does not introduce any automation! No entities are added or deleted automatically uness so declaratively specifified by a developer.
+Instead we focus on not introducing any unnecessary or unused entities into the system.
+The only exception where SnowTF might introduce unused entities is with the access roles module (TODO add link) where all the access roles are created for specified databases and schemas.</p></li>
+</ul>
+</section>
+</section>
+<section id="todos">
+<h2>TODOs<a class="headerlink" href="#todos" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>which grants are included in SnowTF access_roles? <a class="reference external" href="https://docs.snowddl.com/basic/yaml-configs/permission-model">https://docs.snowddl.com/basic/yaml-configs/permission-model</a></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a><ul class="simple">
+<li><p>We need to extend the grants to all relevant permissions and make it configurable</p></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="simple">
+<li><p>Create deploy/admin user <a class="reference external" href="https://docs.snowddl.com/guides/other-guides/admin">https://docs.snowddl.com/guides/other-guides/admin</a></p>
+<ul>
+<li><p>prepare tutorial with accountadmin deploy/admin user that can take care of everything with the first tf apply</p></li>
+<li><p>we want it as the per default we want to set up the security measures as well which are transparent and easier to audit</p></li>
+</ul>
+</li>
+<li><p>research <a class="reference external" href="https://docs.snowddl.com/guides/other-guides/ownership">https://docs.snowddl.com/guides/other-guides/ownership</a></p></li>
+<li><p>Exlplizitely write that our dependencies are managed in terraform VS SnowDDL own mechanism <a class="reference external" href="https://docs.snowddl.com/guides/other-guides/dependency-management">https://docs.snowddl.com/guides/other-guides/dependency-management</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">❄ Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">🚀 Getting Started</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="limitations.html">⚠️  Limitations</a><ul class="simple">
@@ -268,18 +330,19 @@ documentation for details.</p>
 </ul>
 </div>
 </section>
+</section>
 
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="introduction.html">
+          <a class="next-page" href="getting_started.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Introduction</div>
+                <div class="title">🚀 Getting Started</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -302,8 +365,33 @@ documentation for details.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">❄ Introduction</a><ul>
+<li><a class="reference internal" href="#differences-to-snowddl">Differences to SnowDDL</a><ul>
+<li><a class="reference internal" href="#why-is-snowddl-better">Why is SnowDDL better?</a></li>
+<li><a class="reference internal" href="#why-is-snowtf-better">Why is SnowTF better?</a></li>
+<li><a class="reference internal" href="#similarities-and-differences">Similarities and Differences</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#todos">TODOs</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
